@@ -9,6 +9,26 @@ function intro(){
 }
 
 
+intro "Setting environment variables"
+
+EMAIL='hackjack@tutanota.com'
+
+
+intro "keygen stuff, Credentials for github"
+#https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+echo "Enter password for SSH key encryption"
+ssh-keygen -t ed25519 -C $EMAIL
+eval "$(ssh-agent -s)"
+cat ~/.ssh/id_ed25519.pub
+if lsb_release -a | grep "Ubuntu"; then
+	# Copy ssh key to clipoard
+	cat ~/.ssh/id_ed25519.pub | clip.exe
+	# opening browser page for creating a new ssh key on github
+	wslview https://github.com/settings/keys
+fi
+read -p "The ssh key is copied to the clipboard\nPaste ssh key when creating a new ssh key in the github web page\nSave ssh key\nPress any key to resume ..."
+
+
 if lsb_release -a | grep "Ubuntu"; then
 	intro "Update packages"
     sudo apt update -y
@@ -16,6 +36,11 @@ if lsb_release -a | grep "Ubuntu"; then
 	intro "Upgrade packages"
 	sudo apt upgrade -y
 fi
+
+
+
+
+
 
 
 intro "Install nix"
