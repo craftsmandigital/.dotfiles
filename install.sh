@@ -2,10 +2,10 @@
 # https://github.com/jakewies/.dotfiles
 # https://www.jakewiesler.com/blog/portable-development-environment
 function intro(){
-  read -p "\n\n\nControl every step.\nPress any key to resume ...\n\n\n"
   echo -e "\n\n\n\n#########################################################################################################"
   echo -e "#########     $1"
   echo '#########################################################################################################'
+ # read -p "\n\n\nControl every step.\nPress any key to resume ...\n\n\n"
 }
 
 
