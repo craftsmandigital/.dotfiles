@@ -40,7 +40,8 @@ read -p "The ssh key is copied to the clipboard\nPaste ssh key when creating a n
 
 # Install dotfilerepo
 intro 'Install .dotfiles repo to $HOME folder'
-git clone git@github.com:craftsmandigital/.dotfiles.git ~
+cd ~
+git clone git@github.com:craftsmandigital/.dotfiles.git
 cd ~/.dotfiles
 
 if lsb_release -a | grep "Ubuntu"; then
