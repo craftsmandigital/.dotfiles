@@ -70,7 +70,7 @@ nix-env -iA \
 	nixpkgs.fd \
 	nixpkgs.cargo \
 	nixpkgs.lazygit \
-	nixpkgs.zoxide\
+	nixpkgs.zoxide
 	
 	
 intro 'Installing lunar vim'
