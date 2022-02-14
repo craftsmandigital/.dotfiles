@@ -1,3 +1,4 @@
+# bash <(curl -s https://raw.githubusercontent.com/craftsmandigital/.dotfiles/master/install.sh)
 # Heavyly inspired of this setup
 # https://github.com/jakewies/.dotfiles
 # https://www.jakewiesler.com/blog/portable-development-environment
@@ -5,13 +6,21 @@ function intro(){
   echo -e "\n\n\n\n#########################################################################################################"
   echo -e "#########     $1"
   echo '#########################################################################################################'
- # read -p "\n\n\nControl every step.\nPress any key to resume ...\n\n\n"
+  read -p "\n\n\nControl every step.\nPress any key to resume ...\n\n\n"
 }
 
 
 intro "Setting environment variables"
 
 EMAIL='hackjack@tutanota.com'
+USR='hackjack'
+GITHUBPROFILE='craftsmandigital'
+
+
+intro "Config git username and email"
+git config --global user.email $EMAIL
+git config --global user.name $USR
+
 
 
 intro "keygen stuff, Credentials for github"
@@ -29,6 +38,11 @@ fi
 read -p "The ssh key is copied to the clipboard\nPaste ssh key when creating a new ssh key in the github web page\nSave ssh key\nPress any key to resume ..."
 
 
+# Install dotfilerepo
+intro 'Install .dotfiles repo to $HOME folder'
+git clone git@github.com:craftsmandigital/.dotfiles.git ~
+cd ~/.dotfiles
+
 if lsb_release -a | grep "Ubuntu"; then
 	intro "Update packages"
     sudo apt update -y
@@ -36,9 +50,6 @@ if lsb_release -a | grep "Ubuntu"; then
 	intro "Upgrade packages"
 	sudo apt upgrade -y
 fi
-
-
-
 
 
 
@@ -80,10 +91,10 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 rm ~/.config/lvim/config.lua
 
 intro "stow dotfiles"
-stow git
 stow lvim
 # stow tmux
 stow zsh
+stow git
 
 intro "add zsh as a login shell"
 command -v zsh | sudo tee -a /etc/shells
