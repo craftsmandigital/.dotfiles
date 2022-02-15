@@ -17,9 +17,9 @@ USR='hackjack'
 GITHUBPROFILE='craftsmandigital'
 
 
-intro "Config git username and email"
-git config --global user.email $EMAIL
-git config --global user.name $USR
+# intro "Config git username and email"
+# git config --global user.email $EMAIL
+# git config --global user.name $USR
 
 
 
