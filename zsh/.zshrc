@@ -63,5 +63,6 @@ if [ -n "${commands[fzf-share]}" ]; then
   source "$(fzf-share)/completion.zsh"
 fi
 
-eval "$(zoxide init zsh)"
+export _ZO_DATA_DIR=$HOME/.local/share
+# eval "$(zoxide init zsh)"
 alias vi="~/.local/bin/lvim"
