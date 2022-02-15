@@ -1,7 +1,7 @@
 # .dotfiles
 
 1. Clone this repository
-2. Run `install.sh`
+2. Run `bash <(curl -s https://raw.githubusercontent.com/craftsmandigital/.dotfiles/master/install.sh)`
 3. Open up new window to initiate `zsh` shell
 
 ### Current issues
