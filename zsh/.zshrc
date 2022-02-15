@@ -53,4 +53,5 @@ if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
+alias vi="~/.local/bin/lvim"
