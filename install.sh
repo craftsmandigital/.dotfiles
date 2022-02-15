@@ -6,7 +6,7 @@ function intro(){
   echo -e "\n\n\n\n#########################################################################################################"
   echo -e "#########     $1"
   echo '#########################################################################################################'
-  read -p "\n\n\nControl every step.\nPress any key to resume ...\n\n\n"
+  # read -p "\n\n\nControl every step.\nPress any key to resume ...\n\n\n"
 }
 
 
