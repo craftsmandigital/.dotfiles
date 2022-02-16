@@ -93,7 +93,7 @@ rm ~/.config/lvim/config.lua
 
 intro "stow dotfiles"
 stow lvim
-# stow tmux
+stow tmux
 stow zsh
 stow git
 
