@@ -66,3 +66,11 @@ fi
 export _ZO_DATA_DIR=$HOME/.local/share
 # eval "$(zoxide init zsh)"
 alias vi="~/.local/bin/lvim"
+
+# default color on ls
+# https://superuser.com/questions/665274/how-to-make-ls-color-its-output-by-default-without-setting-up-an-alias
+## Colorize the ls output ##
+alias ls='ls --color=auto'
+
+## Use a long listing format ##
+alias ll='ls -la'
