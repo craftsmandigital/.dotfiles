@@ -63,8 +63,15 @@ if [ -n "${commands[fzf-share]}" ]; then
   source "$(fzf-share)/completion.zsh"
 fi
 
+# A next-generation cd command with an interactive filter
+# https://github.com/b4b4r07/enhancd
+ENHANCD_FILTER=peco; export ENHANCD_FILTER
+
 export _ZO_DATA_DIR=$HOME/.local/share
 # eval "$(zoxide init zsh)"
+
+
+
 alias vi="~/.local/bin/lvim"
 
 # default color on ls
