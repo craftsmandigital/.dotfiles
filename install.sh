@@ -84,12 +84,16 @@ nix-env -iA \
 	nixpkgs.lazygit \
 	nixpkgs.zoxide
 	
-	
+intro 'Installing tmux plugins'	
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins	
+
 intro 'Installing lunar vim'
 # https://www.lunarvim.org/01-installing.html#prerequisites
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 # delete initial config file and replace later on with own config file
 rm ~/.config/lvim/config.lua
+# install packages from terminal
+~/.local/bin/lvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 intro "stow dotfiles"
 stow lvim
