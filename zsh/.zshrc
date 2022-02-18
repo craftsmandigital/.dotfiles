@@ -81,3 +81,11 @@ alias ls='ls --color=auto'
 
 ## Use a long listing format ##
 alias ll='ls -la'
+
+
+# Added tmux aliases
+# https://www.barbarianmeetscoding.com/blog/jaimes-guide-to-tmux-the-most-awesome-tool-you-didnt-know-you-needed
+alias t="tmux"      # 
+alias ta="t a -t"   # attach to an existing session
+alias tls="t ls"    # list all your sessions 
+alias tn="t new -t" # create a new session
