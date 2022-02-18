@@ -89,8 +89,7 @@ nix-env -iA \
 	nixpkgs.lazygit \
 	nixpkgs.zoxide
 	
-intro 'Installing tmux plugins'	
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins	
+	
 
 intro 'Installing lunar vim'
 # https://www.lunarvim.org/01-installing.html#prerequisites
@@ -105,6 +104,10 @@ stow lvim
 stow tmux
 stow zsh
 stow git
+
+intro 'Installing tmux plugins'	
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && \
+	~/.tmux/plugins/tpm/bin/install_plugins
 
 intro "add zsh as a login shell"
 command -v zsh | sudo tee -a /etc/shells
