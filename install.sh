@@ -3,10 +3,15 @@
 # https://github.com/jakewies/.dotfiles
 # https://www.jakewiesler.com/blog/portable-development-environment
 function intro(){
-  echo -e "\n\n\n\n#########################################################################################################"
-  echo -e "#########     $1"
-  echo '#########################################################################################################'
-  # read -p "\n\n\nControl every step.\nPress any key to resume ...\n\n\n"
+  printf "\n\n\n\n#########################################################################################################"
+  printf "\n#########     $1      #############"
+  printf "\n#########################################################################################################"
+  # if one argument then pause execution
+  if [ $# -eq 1 ]
+  	then
+		printf "\n\n\nControl every step.\nPress any key to resume ...\n\n\n"
+		read
+	fi
 }
 
 
@@ -92,7 +97,7 @@ intro 'Installing lunar vim'
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 # delete initial config file and replace later on with own config file
 rm ~/.config/lvim/config.lua
-# install packages from terminal
+intro 'install lvim packages from terminal'
 ~/.local/bin/lvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 intro "stow dotfiles"
