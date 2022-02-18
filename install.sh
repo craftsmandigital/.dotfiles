@@ -96,14 +96,17 @@ intro 'Installing lunar vim'
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 # delete initial config file and replace later on with own config file
 rm ~/.config/lvim/config.lua
-intro 'install lvim packages from terminal'
-~/.local/bin/lvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
 
 intro "stow dotfiles"
 stow lvim
 stow tmux
 stow zsh
 stow git
+
+intro 'install lvim packages from terminal'
+# This must be done after my config files are stowed. Dependet on config.lua
+~/.local/bin/lvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 intro 'Installing tmux plugins'	
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && \
