@@ -2,16 +2,18 @@
 # Heavyly inspired of this setup
 # https://github.com/jakewies/.dotfiles
 # https://www.jakewiesler.com/blog/portable-development-environment
+
+yn=Y
+
 function intro(){
   printf "\n\n\n\n#########################################################################################################"
   printf "\n#########     $1      #############"
   printf "\n#########################################################################################################"
-  # if one argument then pause execution
-  if [ $# -eq 1 ]
-  	then
-		printf "\n\n\nControl every step.\nPress any key to resume ...\n\n\n"
-		read
-	fi
+ 
+    case $yn in
+        [Yy]* ) read -p "Do you wish to pause every step ? y=yes n=no x=exit" yn;;
+        [Xx]* ) exit;;
+    esac
 }
 
 
