@@ -65,7 +65,7 @@ fi
 
 # A next-generation cd command with an interactive filter
 # https://github.com/b4b4r07/enhancd
-ENHANCD_FILTER=peco; export ENHANCD_FILTER
+ENHANCD_FILTER=fzf; export ENHANCD_FILTER
 
 export _ZO_DATA_DIR=$HOME/.local/share
 # eval "$(zoxide init zsh)"
