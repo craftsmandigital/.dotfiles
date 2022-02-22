@@ -1,6 +1,18 @@
-# Alacritty home page:  https://github.com/alacritty/alacritty
+# Alacritty home page:
+# https://github.com/alacritty/alacritty
+
 # Path to Alacritty file in windows: %APPDATA%\alacritty\alacritty.yml
-# Configuing shorcut in windows to open Alacritty inside WSL2: "C:\Program Files\Alacritty\alacritty.exe" -e wsl ~
+
+# Configuing shorcut in windows to open Alacritty inside WSL2:
+# "C:\Program Files\Alacritty\alacritty.exe" -e wsl ~
+
+# Remember to add a Windows compatible Nerd font to nice looking terminal.
+# This font is beatiful 'Hack NF'. Install the windows compatible fonts:
+# https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+
+
+
+
 
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
