@@ -32,6 +32,8 @@ alias vimrc='vim ${HOME}/.config/nvim/init.vim'
 # cat -> bat
 alias cat='bat'
 
+PATH="$PATH:$HOME/.local/bin"
+
 # DIRCOLORS (MacOS)
 export CLICOLOR=1
 
