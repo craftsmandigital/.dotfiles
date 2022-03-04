@@ -52,17 +52,15 @@ if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-if [[ ! -f ~/.p10k.zsh ]]; then
-  source ~/.p10k.zsh
-  # some mega hacks to get language servers to work in lvim. NPM is installed in this schript
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# some mega hacks to get language servers to work in lvim. NPM is installed in this schript above
+npm list -g @tailwindcss/language-server
+if [ ! $? -eq 0 ]; then
   nvm install 16
   npm install -g @tailwindcss/language-server
   npm install -g emmet-ls
 fi
-
-
-
-
 
 # https://nixos.wiki/wiki/Fzf
 if [ -n "${commands[fzf-share]}" ]; then
