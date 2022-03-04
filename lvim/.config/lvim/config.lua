@@ -106,7 +106,6 @@ lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
 }
-
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
@@ -122,6 +121,22 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- ---@usage setup a server -- see: https://www.lunarvim.org/languages/#overriding-the-default-configuration
 -- local opts = {} -- check the lspconfig documentation for a list of all possible options
 -- require("lvim.lsp.manager").setup("pylsp", opts)
+
+
+-- This is a major hack, chould work out of the box
+-- There is also neded to install npm stuff manually
+-- http://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcsss
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#emmet_ls
+-- npm install -g @tailwindcss/language-server
+-- npm install -g emmet-ls
+require'lspconfig'.tailwindcss.setup{}
+require'lspconfig'.emmet_ls.setup{}
+
+
+
+
+
+
 
 -- -- you can set a custom on_attach function that will be used for all the language servers
 -- -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
@@ -183,8 +198,9 @@ lvim.plugins = {
         vim.api.nvim_set_keymap('n', "<C-\\>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLastActive()<cr>", { noremap = true, silent = true })
         vim.api.nvim_set_keymap('n', "<C-Space>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateNext()<cr>", { noremap = true, silent = true })
     end
-    }
+    },
     -- {require'telescope'.load_extension('zoxide')},
+ 
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
