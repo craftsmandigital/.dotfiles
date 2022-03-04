@@ -55,12 +55,12 @@ if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # some mega hacks to get language servers to work in lvim. NPM is installed in this schript above
-npm list -g @tailwindcss/language-server &> /dev/null
-if [ $? -ne 0 ]; then
-  nvm install 16
-  npm install -g @tailwindcss/language-server
-  npm install -g emmet-ls
-fi
+#npm list -g @tailwindcss/language-server &> /dev/null
+#if [ $? -ne 0 ]; then
+#  nvm install 16
+#  npm install -g @tailwindcss/language-server
+#  npm install -g emmet-ls
+#fi
 
 # https://nixos.wiki/wiki/Fzf
 if [ -n "${commands[fzf-share]}" ]; then
