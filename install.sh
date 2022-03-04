@@ -84,13 +84,12 @@ nix-env -iA \
 	nixpkgs.gnumake \
 	nixpkgs.gcc \
 	nixpkgs.direnv \
-	nixpkgs.nodePackages.npm \
 	nixpkgs.nodejs \
 	nixpkgs.fd \
 	nixpkgs.cargo \
 	nixpkgs.lazygit \
 	nixpkgs.zoxide
-	
+# 	nixpkgs.nodePackages.npm \
 	
 
 intro 'Installing lunar vim'
