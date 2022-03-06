@@ -88,8 +88,8 @@ nix-env -iA \
 	nixpkgs.fd \
 	nixpkgs.cargo \
 	nixpkgs.lazygit \
-	nixpkgs.zoxide
-# 	nixpkgs.nodePackages.npm \
+	nixpkgs.zoxide \
+ 	nixpkgs.nodePackages.npm
 	
 
 intro 'Installing lunar vim'
