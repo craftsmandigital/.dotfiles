@@ -88,11 +88,19 @@ nix-env -iA \
 	nixpkgs.fd \
 	nixpkgs.cargo \
 	nixpkgs.lazygit \
-	nixpkgs.zoxide
-# 	nixpkgs.nodePackages.npm
+	nixpkgs.zoxide \
+	nixpkgs.nodePackages.npm
 	
 
-intro 'Installing lunar vim'
+intro 'Installing NPM stuff'
+# Adding node hack to fix ERROR EACCES
+# https://nixos.wiki/wiki/Node.js?utm_source=pocket_mylist
+npm set prefix ~/.npm-global
+export PATH=$PATH:$HOME/.npm-global
+# installing language servers to use with lvim
+npm install -g @tailwindcss/language-server
+npm install -g emmet-ls
+
 # https://www.lunarvim.org/01-installing.html#prerequisites
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 # delete initial config file and replace later on with own config file
