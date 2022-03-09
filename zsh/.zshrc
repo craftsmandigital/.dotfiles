@@ -110,5 +110,6 @@ setopt EXTENDED_HISTORY  # record command start time
 
 # Adding node hack to fix ERROR EACCES
 # https://nixos.wiki/wiki/Node.js?utm_source=pocket_mylist
-export PATH=$PATH:$HOME/.npm-global
+# export PATH=$PATH:$HOME/.npm-global
+export PATH=$PATH:$HOME/.npm-global/bin # ???
 
