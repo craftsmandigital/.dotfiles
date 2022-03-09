@@ -44,13 +44,13 @@ if executable(s:clip)
 endif
 ]])
 
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>j",
-	":lua zoxide<CR>",
-	-- ":lua require'telescope'.extensions.zoxide.list{}<CR>",
-	{noremap = true, silent = true}
-)
+-- vim.api.nvim_set_keymap(
+-- 	"n",
+-- 	"<leader>j",
+-- 	":lua zoxide<CR>",
+-- 	-- ":lua require'telescope'.extensions.zoxide.list{}<CR>",
+-- 	{noremap = true, silent = true}
+-- )
 
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
