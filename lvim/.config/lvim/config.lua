@@ -16,7 +16,6 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
-lvim.keys.normal_mode["<C-s>"] = ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<cr>"
 lvim.keys.normal_mode["<C-h>"] = ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<cr>"
 lvim.keys.normal_mode["<C-j>"] = ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<cr>"
 lvim.keys.normal_mode["<C-k>"] = ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<cr>"
