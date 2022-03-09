@@ -33,7 +33,7 @@ GITHUBPROFILE='craftsmandigital'
 intro "keygen stuff, Credentials for github"
 #https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 echo "Enter password for SSH key encryption"
-ssh-keygen -t ed25519 -C $EMAIL
+printf "\n\n\n" | ssh-keygen -t ed25519 -C $EMAIL
 eval "$(ssh-agent -s)"
 cat ~/.ssh/id_ed25519.pub
 if lsb_release -a | grep "Ubuntu"; then
@@ -97,12 +97,17 @@ intro 'Installing NPM stuff'
 # https://nixos.wiki/wiki/Node.js?utm_source=pocket_mylist
 npm set prefix ~/.npm-global
 export PATH=$PATH:$HOME/.npm-global
+
+# Installing global NPM packages
+npm install -g http-server
+npm install -g tailwindcss
 # installing language servers to use with lvim
 npm install -g @tailwindcss/language-server
 npm install -g emmet-ls
 
+intro 'Installing LunarVim'
 # https://www.lunarvim.org/01-installing.html#prerequisites
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+printf "\n\n\n" | bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 # delete initial config file and replace later on with own config file
 rm ~/.config/lvim/config.lua
 
