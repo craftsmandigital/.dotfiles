@@ -6,6 +6,9 @@ filled in as strings with either
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
+
+
+
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
