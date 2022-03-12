@@ -99,7 +99,7 @@ npm set prefix ~/.npm-global
 export PATH=$PATH:$HOME/.npm-global
 
 # Installing global NPM packages
-npm install -g http-server
+# npm install -g http-server
 # npm install -g tailwindcss
 # installing language servers to use with lvim
 npm install -g @tailwindcss/language-server
