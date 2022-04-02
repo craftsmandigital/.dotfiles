@@ -31,7 +31,8 @@ lvim.keys.normal_mode["<C-Space>"] = ":lua require'nvim-tmux-navigation'.NvimTmu
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
 
 
-
+-- vim.relativenumber = "true"
+vim.cmd("set relativenumber")
 vim.cmd([[
 
 " Share system clipboard with windows
