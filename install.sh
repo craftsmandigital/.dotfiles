@@ -89,7 +89,9 @@ nix-env -iA \
 	nixpkgs.cargo \
 	nixpkgs.lazygit \
 	nixpkgs.zoxide \
-	nixpkgs.nodePackages.npm
+	nixpkgs.nodePackages.npm \
+	nixpkgs.exa \
+	nixpkgs.entr
 	
 
 intro 'Installing NPM stuff'

@@ -73,7 +73,7 @@ fi
 ENHANCD_FILTER=fzf; export ENHANCD_FILTER
 
 export _ZO_DATA_DIR=$HOME/.local/share
-# eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh)"
 
 
 
@@ -94,6 +94,19 @@ alias t="tmux"      #
 alias ta="t a -t"   # attach to an existing session
 alias tls="t ls"    # list all your sessions 
 alias tn="t new -t" # create a new session
+
+# more aliaseses
+JOBDIR='/mnt/c/Users/jviks/Documents/OneDrive - Mikaelkirken/Mikaelkirken Arkiv'
+PROJECTDIR=~/projects
+SHELLDIR="$PROJECTDIR/shell"
+# alias jj=". $SHELLDIR/supercd.bash"
+alias jj='. $SHELLDIR/supercd.bash'
+alias jjj='echo $JOBDIR | . $SHELLDIR/supercd.bash'
+alias jh='echo $PROJECTDIR | . $SHELLDIR/supercd.bash'
+
+# alias jj=". ~/projects/shell/supercd.bash"
+
+
 
 # the detailed meaning of the below three variable can be found in `man zshparam`.
 export HISTFILE=~/.histfile
