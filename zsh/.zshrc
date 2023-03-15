@@ -15,7 +15,10 @@ source ${HOME}/.zsh_plugins.sh
 # Bundle zsh plugins via antibody
 alias update-antibody='antibody bundle < $HOME/.zsh_plugins.txt > $HOME/.zsh_plugins.sh'
 # Better 'ls' in MacOS
-alias ls='ls -al'
+alias ls='exa -bFa --git --git-ignore' # list files included hidden, ignore files inside .gitignore
+alias lS='exa -a1' # List of clean filenames in vertical. Dont include hidden files
+alias ll='exa -lbhHmuSa --time-style=long-iso --git --color-scale --git-ignore'
+alias lt='exa -a --tree --level=3 --git-ignore'
 # List out all globally installed npm packages
 alias list-npm-globals='npm list -g --depth=0'
 # Adds better handling for `rm` using trash-cli
@@ -82,10 +85,9 @@ alias vi="~/.local/bin/lvim"
 # default color on ls
 # https://superuser.com/questions/665274/how-to-make-ls-color-its-output-by-default-without-setting-up-an-alias
 ## Colorize the ls output ##
-alias ls='ls --color=auto'
+# alias ls='ls --color=auto'
 
 ## Use a long listing format ##
-alias ll='ls -la'
 
 
 # Added tmux aliases
