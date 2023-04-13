@@ -40,7 +40,10 @@ lvim.plugins = {
   },
   {
     "jvgrootveld/telescope-zoxide",
-  }
+  },
+  {
+    "Exafunction/codeium.vim",
+  },
 }
 
 --[[

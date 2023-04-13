@@ -97,6 +97,9 @@ alias ta="t a -t"   # attach to an existing session
 alias tls="t ls"    # list all your sessions 
 alias tn="t new -t" # create a new session
 
+
+function help() { curl $(echo "cheat.sh/$1") }
+
 # more aliaseses
 JOBDIR='/mnt/c/Users/jviks/Documents/OneDrive - Mikaelkirken/Mikaelkirken Arkiv'
 PROJECTDIR=~/projects
