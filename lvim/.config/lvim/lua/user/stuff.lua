@@ -1,8 +1,7 @@
 vim.api.nvim_set_keymap("i", "<C-j>", "<Cmd>call codeium#CycleCompletions(1)<CR>", { noremap = true })
 vim.api.nvim_set_keymap("i", "<C-k>", "<Cmd>call codeium#CycleCompletions(-1)<CR>", { noremap = true })
-vim.api.nvim_set_keymap("i", "<C-c>", "<Cmd>call codeium#Clear()<CR>", { noremap = true })
-vim.api.nvim_set_keymap("i", "<C-m>", "<Cmd>call codeium#Complete()<CR>", { noremap = true })
-
+-- vim.api.nvim_set_keymap("i", "<C-c>", "<Cmd>call codeium#Clear()<CR>", { noremap = true })
+-- vim.api.nvim_set_keymap("i", "<C-cr>", "<Cmd>call codeium#Complete()<CR>", { noremap = true })
 -- lvim.builtin.which_key.mappings["a"] = {
 --   name = "+AI Codeium",
 
