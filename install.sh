@@ -92,7 +92,8 @@ nix-env -iA \
 	nixpkgs.nodePackages.npm \
 	nixpkgs.exa \
 	nixpkgs.entr \
-	nixpkgs.ripgrep-all
+	nixpkgs.ripgrep-all \
+ 	nixpkgs.unzip
 	
 
 intro 'Installing NPM stuff'
